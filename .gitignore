@@ -15,3 +15,5 @@ studio_data/
 .venv/
 vendor/
 .DS_Store
+dist/
+.installed_app_version

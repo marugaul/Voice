@@ -13,6 +13,8 @@ de voz propia o autorizada. Construida con Flask, OpenVoice V2 y MeloTTS.
 
 ## Arranque en Mac
 
+También se puede abrir como aplicación: [MAC_APP.md](MAC_APP.md).
+
 Necesitás Homebrew, Git y espacio para Python, bibliotecas y modelos.
 
 ```bash
