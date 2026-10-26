@@ -1,0 +1,22 @@
+name: Paquete para Mac
+on:
+  push:
+    branches: [main, feat/estudio-de-voz]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - run: bash -n packaging/macos/launcher packaging/macos/launch.command
+      - run: python packaging/build_mac_app.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Susurros-de-Eternidad-Mac
+          path: dist/Susurros-de-Eternidad-Mac.zip
+          retention-days: 30
