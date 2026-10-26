@@ -16,7 +16,7 @@ de voz propia o autorizada. Construida con Flask, OpenVoice V2 y MeloTTS.
 Necesitás Homebrew, Git y espacio para Python, bibliotecas y modelos.
 
 ```bash
-git clone https://github.com/marugaul/Voice.git
+git clone --branch feat/estudio-de-voz https://github.com/marugaul/Voice.git
 cd Voice
 brew install uv ffmpeg
 bash instalar.command
