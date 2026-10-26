@@ -1,6 +1,6 @@
 # Voice · Susurros de Eternidad
 
-Página local para crear narraciones en español a partir de guiones y una muestra
+Página para crear narraciones en español a partir de guiones y una muestra
 de voz propia o autorizada. Construida con Flask, OpenVoice V2 y MeloTTS.
 
 ## Funciones
@@ -34,10 +34,15 @@ Resultados de las pruebas y límites: [VALIDACION.md](VALIDACION.md).
 
 ## Página y servidor
 
+**Acceso desde cualquier lugar:** seguí [ACCESO_REMOTO.md](ACCESO_REMOTO.md).
+Incluye acceso privado por HTTPS con Tailscale y contraseña. Podés usar el
+celular o una computadora fuera de casa; la Mac sigue procesando los audios.
+
 La interfaz está en `studio/index.html`; el servidor se inicia con
 `python -m studio.server`. Abrir el HTML por separado no genera audio.
 GitHub aloja el código; GitHub Pages no puede ejecutar este motor Python.
-Esta versión funciona en la computadora local. Publicarla para varios usuarios
+Esta versión funciona localmente o en tus dispositivos mediante Tailscale.
+Publicarla para varios usuarios
 requiere un servidor con autenticación y una configuración distinta.
 
 La CPU de la Mac realiza la generación. No se ha probado en una Mac física;
@@ -55,7 +60,7 @@ Respaldá `studio_data/` por separado si querés conservar tus voces.
 python -m unittest studio.test_studio -v
 ```
 
-Estas cinco pruebas usan un motor simulado; no descargan modelos.
+Estas siete pruebas usan un motor simulado; no descargan modelos.
 Para ejecutarlas basta instalar Flask: `python -m pip install flask==3.0.3`.
 
 ## Créditos
